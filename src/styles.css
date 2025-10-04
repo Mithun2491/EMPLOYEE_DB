@@ -1,0 +1,68 @@
+/* Sidebar styling */
+.employee-sidebar {
+  background: linear-gradient(180deg, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  padding: 1rem;
+}
+
+/* Employee list items */
+.employee-item {
+  padding: 12px 10px;
+  border-radius: 8px !important;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  background-color: #fff !important;
+  border: 1px solid transparent !important;
+}
+
+/* Hover effect */
+.employee-item:hover {
+  background-color: #f1f3f5 !important;
+  transform: translateX(5px);
+  border: 1px solid #dee2e6 !important;
+}
+
+/* ✅ Active (selected) employee styling */
+.employee-item.active {
+  background: linear-gradient(90deg, #212529, #343a40) !important;
+  color: #fff !important;
+  font-weight: 600;
+  transform: scale(1.02);
+  border: 1px solid #000 !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Keep icons visible on dark active bg */
+.employee-item.active .delete-icon,
+.employee-item.active i {
+  color: #fff !important;
+}
+
+/* Delete icon */
+.delete-icon {
+  opacity: 0;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.employee-item:hover .delete-icon {
+  opacity: 1;
+}
+
+/* Smooth scrollbar hidden */
+.employee-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.employee-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.employee-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
